@@ -4,25 +4,32 @@
 -- lower level configuration and more robust one. (which-key will
 -- automatically pick-up stored data by this setting.)
 return {
-  -- first key is the mode
   n = {
-    -- second key is the lefthand side of the map
-    -- mappings seen under group name "Buffer"
-    ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
-    ["<leader>bD"] = {
-      function()
-        require("astronvim.utils.status").heirline.buffer_picker(function(bufnr) require("astronvim.utils.buffer").close(bufnr) end)
-      end,
-      desc = "Pick to close",
-    },
-    -- tables with the `name` key will be registered with which-key if it's installed
-    -- this is useful for naming menus
-    ["<leader>b"] = { name = "Buffers" },
-    -- quick save
-    -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    -- Menu namings
+    ["<leader>b"] = { desc = " Buffers" },
+    ["<leader>bs"] = { desc = " Sort Buffers" },
+    ["<leader>f"] = { desc = " Find" },
+    ["<leader>p"] = { desc = " Packages" },
+    ["<leader>S"] = { desc = " Session" },
+    -- Buffer navigation
+    ["<tab>"] = { "<cmd>bnext<cr>", desc = "Next Tab" },
+    ["<S-tab>"] = { "<cmd>bprev<cr>", desc = "Previous Tab" },
+    -- Buffer Sizing
+    ["<A-j>"] = { "<cmd>resize +2<cr>", desc = "Increase Window Height" },
+    ["<A-k>"] = { "<cmd>resize -2<cr>", desc = "Decrease Window Height" },
+    ["<A-l>"] = { "<cmd>vertical resize +2<cr>", desc = "Increase Window Width" },
+    ["<A-h>"] = { "<cmd>vertical resize -2<cr>", desc = "Decrease Window Width" },
+    -- Disable useless terminal openings
+    ["<leader>tu"] = false,
+    ["<leader>tp"] = false,
+    ["<leader>tn"] = false,
+    -- Snippet Running
+    ["<leader>l."] = { "<cmd>SnipRun<cr>", desc = "Run Code Snippet" },
+    ["<leader>l,"] = { "<cmd>SnipClose<cr>", desc = "Close Running Snippet" },
   },
   t = {
-    -- setting a mapping to false will disable it
-    -- ["<esc>"] = false,
   },
+  v = {
+    ["<leader>l."] = { "<cmd>SnipRun<cr>", desc = "Run Code Snippet" }
+  }
 }
