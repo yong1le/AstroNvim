@@ -20,7 +20,7 @@ return {
   colorscheme = "onedark_vivid",
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
-    virtual_text = true,
+    virtual_text = false,
     underline = true,
   },
   lsp = {
@@ -64,6 +64,7 @@ return {
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
+    require('user.autocmds')
     -- Set up custom filetypes
     -- vim.filetype.add {
     --   extension = {
