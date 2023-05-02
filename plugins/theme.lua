@@ -1,25 +1,39 @@
 return {
-  "olimorris/onedarkpro.nvim",
+  "rebelot/kanagawa.nvim",
   config = function()
-    require("onedarkpro").setup({
-      options = {
-        cursorline = true,
+    require('kanagawa').setup({
+      compile = false,  -- enable compiling the colorscheme
+      undercurl = true, -- enable undercurls
+      commentStyle = { italic = true },
+      functionStyle = {},
+      keywordStyle = { italic = true },
+      statementStyle = { bold = true },
+      typeStyle = {},
+      transparent = true,    -- do not set background color
+      dimInactive = false,   -- dim inactive window `:h hl-NormalNC`
+      terminalColors = true, -- define vim.g.terminal_color_{0,17}
+      colors = {
+        palette = {},
+        theme = {
+          wave = {},
+          lotus = {},
+          dragon = {},
+          all = {
+            ui = {
+              bg_gutter = "none"
+            }
+          }
+        },
       },
-      styles = {
-        types = "NONE",
-        methods = "NONE",
-        numbers = "NONE",
-        strings = "NONE",
-        comments = "italic",
-        keywords = "bold,italic",
-        constants = "bold",
-        functions = "italic",
-        operators = "NONE",
-        variables = "NONE",
-        parameters = "NONE",
-        conditionals = "italic",
-        virtual_text = "italic",
+      overrides = function(colors) -- add/modify highlights
+        return {}
+      end,
+      theme = "wave", -- Load "wave" theme when 'background' option is not set
+      background = {
+        -- map the value of 'background' option to a theme
+        dark = "wave", -- try "dragon" !
+        light = "lotus"
       },
     })
-  end,
+  end
 }

@@ -12,8 +12,13 @@ return {
     ["<leader>p"] = { desc = " Packages" },
     ["<leader>S"] = { desc = " Session" },
     -- Buffer navigation
-    ["<tab>"] = { "<cmd>bnext<cr>", desc = "Next Tab" },
-    ["<S-tab>"] = { "<cmd>bprev<cr>", desc = "Previous Tab" },
+    ["<tab>"] = {
+      function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
+      desc = "Next Tab"
+    },
+    ["<S-tab>"] = {
+      function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
+      desc = "Previous Tab" },
     -- Buffer Sizing
     ["<A-j>"] = { "<cmd>resize +2<cr>", desc = "Increase Window Height" },
     ["<A-k>"] = { "<cmd>resize -2<cr>", desc = "Decrease Window Height" },
