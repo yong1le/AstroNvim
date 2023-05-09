@@ -1,10 +1,23 @@
 return {
   "lervag/vimtex",
   lazy = false,
-  config = function ()
+  config = function()
     vim.g.vimtex_view_method = "sioyek"
+    vim.g.vimtex_compiler_latexmk = {
+      build_dir = './outputs',
+      callback = 1,
+      continuous = 1,
+      executable = 'latexmk',
+      hooks = {},
+      options = {
+        '-verbose',
+        '-file-line-error',
+        '-synctex=1',
+        '-interaction=nonstopmode',
+      },
+    }
   end,
   keys = {
-    {"<leader>.", "<cmd>:VimtexCompile<cr>", desc = "Compile Latex"},
+    { "<leader>.", "<cmd>:VimtexCompile<cr>", desc = "Compile Latex" },
   }
 }
