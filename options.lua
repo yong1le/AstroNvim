@@ -8,6 +8,7 @@ return {
     signcolumn = "yes",
     wrap = false,          -- sets vim.opt.wrap
     cmdheight = 1,
+    swapfile = false,
   },
   g = {
     mapleader = " ",                 -- sets vim.g.mapleader
