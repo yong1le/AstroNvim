@@ -7,7 +7,7 @@ return {
         img_name = function() return os.date('%Y-%m-%d-%H-%M-%S') end,
       },
       tex = {
-        affix = "\\input{%s}"
+        affix = "\\includegraphics[width=\\textwidth]{%s}"
       }
     }
   end,
