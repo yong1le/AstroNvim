@@ -26,19 +26,15 @@ return {
   lsp = {
     -- customize lsp formatting options
     formatting = {
-      -- control auto formatting on save
       format_on_save = {
-        enabled = false,    -- enable or disable format on save globally
-        allow_filetypes = { -- enable format on save for specified filetypes only
-          -- "go",
+        enabled = false,
+        allow_filetypes = {
         },
-        ignore_filetypes = { -- disable format on save for specified filetypes
-          -- "python",
+        ignore_filetypes = {
         },
       },
       disabled = { -- disable formatting capabilities for the listed language servers
         -- disable lua_ls formatting capability if you want to use StyLua to format your lua code
-        "lua_ls",
         "jdtls",
         "pyright",
       },
@@ -48,9 +44,8 @@ return {
       -- end
     },
     -- enable servers that you already have installed without mason
-    servers = {
-      -- "pyright"
-    },
+    servers = {},
+    config = {},
   },
   -- Configure require("lazy").setup() options
   lazy = {
