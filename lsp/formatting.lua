@@ -1,0 +1,12 @@
+return {
+  format_on_save = {
+    enabled = false,
+    allow_filetypes = {},
+    ignore_filetypes = {},
+  },
+  disabled = {
+    "jdtls",
+    "pyright",
+  },
+  timeout_ms = 1000,
+}
