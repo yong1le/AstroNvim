@@ -16,7 +16,7 @@ return {
       --   ["remote3"] = "github_user", -- GitHub user assume AstroNvim fork
     },
   },
-  colorscheme = "kanagawa",
+  colorscheme = "gruvbox",
   -- Configure require("lazy").setup() options
   lazy = {
     defaults = { lazy = true },
