@@ -4,9 +4,6 @@ return {
     allow_filetypes = {},
     ignore_filetypes = {},
   },
-  disabled = {
-    "jdtls",
-    "pyright",
-  },
+  disabled = {},
   timeout_ms = 1000,
 }
