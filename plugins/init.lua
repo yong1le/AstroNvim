@@ -14,4 +14,5 @@ return {
   { import = "astrocommunity.motion.leap-nvim" },
   { import = "astrocommunity.motion.harpoon" },
   { import = "astrocommunity.colorscheme.catppuccin" },
+  {import = "astrocommunity.motion.nvim-surround"}
 }
