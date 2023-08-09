@@ -23,6 +23,8 @@ return {
     ["<leader>tu"] = false,
     ["<leader>tp"] = false,
     ["<leader>tn"] = false,
+    -- open url
+    ["<leader>o"] = { "<cmd> lua require('astronvim.utils').system_open()<cr>", desc="Open file under cursor"}
   },
   t = {},
 }
