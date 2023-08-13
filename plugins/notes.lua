@@ -4,23 +4,21 @@ return {
     branch = "main",
     opts = {
       load = {
-        ["core.defaults"] = {},
-        -- Hiding markup
-        ["core.concealer"] = {},
-        ["core.keybinds"] = {},
-        ["core.completion"] = {
+        ["core.journal"] = {
           config = {
-            engine = "nvim-cmp",
+            journal_folder = "journal",
+            strategy = "flat",
           },
         },
-        ["core.journal"] = {},
         -- Keep track of notebooks
         ["core.dirman"] = {
           config = {
+            index = "index.norg",
             workspaces = {
-              school = "~/Documents/notes/school",
-              bible = "~/Documents/notes/bible",
+              notes = "~/Documents/notes/uni",
+              bible = "~/Documents/notes/bible"
             },
+            default_workspace = "notes",
           },
         },
         -- Indenting
@@ -30,17 +28,14 @@ return {
         -- Exporting
         ["core.tangle"] = {},
         ["core.export"] = {},
-        -- Presenting
-        ["core.presenter"] = {
+        -- Summary
+        ["core.summary"] = {},
+        ["core.esupports.metagen"] = {
           config = {
-            zen_mode = "zen-mode",
-          },
+            type = "auto"
+          }
         },
       },
     },
   },
-  {
-    "folke/zen-mode.nvim",
-    cmd = "ZenMode"
-  }
 }
