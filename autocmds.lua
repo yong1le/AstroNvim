@@ -25,6 +25,8 @@ vim.api.nvim_create_autocmd("FileType", {
 
     local maps = { n = {}, i = {} }
 
+    maps.n["<leader>ni"] = { desc = "Insert Links" }
+
     maps.n["<leader>nn"] = { "<cmd>Neorg keybind all core.dirman.new.note<cr>", desc = "New Note" }
     maps.n["<leader>ns"] = { "<cmd>Neorg generate-workspace-summary<cr>", desc = "Summary" }
     maps.n["<leader>nc"] =

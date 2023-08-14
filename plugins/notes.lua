@@ -9,8 +9,7 @@ return {
       load = {
         ["core.defaults"] = {},
         ["core.keybinds"] = {
-          config = {
-          },
+          config = {},
         },
         ["core.completion"] = {
           config = {
@@ -50,6 +49,13 @@ return {
     keys = {
       { "<leader>ng", "<cmd>Neorg index<cr>", desc = "Go to default workspace" },
       { "<leader>nj", "<cmd>Nerog journal<cr>", desc = "Open journal picker" },
+    },
+  },
+  {
+    "nvim-neorg/neorg-telescope",
+    keys = {
+      { "<leader>nil", "<cmd>Telescope neorg insert_link<cr>", desc = "Links" },
+      { "<leader>nif", "<cmd>Telescope neorg insert_file_link<cr>", desc = "Files" },
     },
   },
 }
