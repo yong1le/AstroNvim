@@ -6,14 +6,17 @@ return {
     ["<leader>f"] = { desc = " Find" },
     ["<leader>p"] = { desc = " Packages" },
     ["<leader>S"] = { desc = " Session" },
+    ["<leader>r"] = { desc = "Refactor" },
+
     -- Buffer navigation
     ["<tab>"] = {
       function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
-      desc = "Next Tab"
+      desc = "Next Tab",
     },
     ["<S-tab>"] = {
       function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
-      desc = "Previous Tab" },
+      desc = "Previous Tab",
+    },
     -- Buffer Sizing
     ["<A-j>"] = { "<cmd>resize +2<cr>", desc = "Increase Window Height" },
     ["<A-k>"] = { "<cmd>resize -2<cr>", desc = "Decrease Window Height" },
@@ -24,7 +27,9 @@ return {
     ["<leader>tp"] = false,
     ["<leader>tn"] = false,
     -- open url
-    ["<leader>o"] = { "<cmd> lua require('astronvim.utils').system_open()<cr>", desc="Open file under cursor"}
+    ["<leader>o"] = { "<cmd> lua require('astronvim.utils').system_open()<cr>", desc = "Open file under cursor" },
+    -- disable new file
+    ["<leader>n"] = false,
   },
   t = {},
 }
