@@ -2,9 +2,9 @@ return {
   "AstroNvim/astrotheme",
   opts = {
     style = {
-      transparent = true,
+      -- transparent = true,
       inactive = false,
-      float = false,
+      -- float = false,
       neotree = false,
     }
   }

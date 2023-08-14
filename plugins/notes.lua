@@ -1,9 +1,22 @@
+local maps = { n = {} }
+maps.n["<leader>n"] = { desc = "Neorg" }
+require("astronvim.utils").set_mappings(maps)
 return {
   {
     "nvim-neorg/neorg",
     branch = "main",
     opts = {
       load = {
+        ["core.defaults"] = {},
+        ["core.keybinds"] = {
+          config = {
+          },
+        },
+        ["core.completion"] = {
+          config = {
+            engine = "nvim-cmp",
+          },
+        },
         ["core.journal"] = {
           config = {
             journal_folder = "journal",
@@ -21,20 +34,22 @@ return {
           },
         },
         -- Indenting
-        ["core.promo"] = {},
         ["core.itero"] = {},
-        ["core.esupports.indent"] = {},
         -- Exporting
-        ["core.tangle"] = {},
         ["core.export"] = {},
         -- Summary
         ["core.summary"] = {},
         ["core.esupports.metagen"] = {
           config = {
-            type = "auto"
-          }
+            type = "auto",
+          },
         },
+        ["core.ui.calendar"] = {},
       },
+    },
+    keys = {
+      { "<leader>ng", "<cmd>Neorg index<cr>", desc = "Go to default workspace" },
+      { "<leader>nj", "<cmd>Nerog journal<cr>", desc = "Open journal picker" },
     },
   },
 }
