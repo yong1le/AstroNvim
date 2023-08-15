@@ -15,4 +15,5 @@ return {
   { import = "astrocommunity.motion.harpoon" },
   { import = "astrocommunity.motion.nvim-surround" },
   { import = "astrocommunity.note-taking.neorg" },
+  { import = "astrocommunity.utility/telescope-fzy-native-nvim" },
 }

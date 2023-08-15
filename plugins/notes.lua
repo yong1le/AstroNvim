@@ -4,7 +4,10 @@ require("astronvim.utils").set_mappings(maps)
 return {
   {
     "nvim-neorg/neorg",
-    branch = "main",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter"
+    },
+    version = false,
     opts = {
       load = {
         ["core.defaults"] = {},
@@ -57,5 +60,23 @@ return {
       { "<leader>nil", "<cmd>Telescope neorg insert_link<cr>", desc = "Links" },
       { "<leader>nif", "<cmd>Telescope neorg insert_file_link<cr>", desc = "Files" },
     },
+  },
+  {
+    "ekickx/clipboard-image.nvim",
+    cmd = { "PasteImg" },
+    config = function()
+      require("clipboard-image").setup {
+        default = {
+          img_dir = "assets",
+          img_name = function() return os.date "%Y-%m-%d-%H-%M-%S" end,
+          affix = "<\n  %s\n>",
+        },
+        norg = {
+          img_dir = "assets",
+          img_dir_txt = "assets",
+          affix = "{/ %s}",
+        },
+      }
+    end,
   },
 }
