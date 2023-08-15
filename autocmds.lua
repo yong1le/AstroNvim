@@ -35,7 +35,7 @@ vim.api.nvim_create_autocmd("FileType", {
 
     maps.n["<leader>ne"] = { desc = "Export" }
     maps.n["<leader>nec"] = { "<cmd>Neorg tangle current-file<cr>", desc = "Code Blocks" }
-    maps.n["<leader>nee"] = { "<cmd>Neorg export", desc = "Export" }
+    maps.n["<leader>nee"] = { "<cmd>Neorg export<cr>", desc = "Export" }
 
     maps.n["<leader>nt"] = { desc = "Todos" }
     maps.n["<leader>ntd"] = { "<cmd>Neorg keybind all core.qol.todo_items.todo.task_done<cr>", desc = "Task Done" }

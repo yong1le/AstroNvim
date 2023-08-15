@@ -11,7 +11,8 @@ return {
     list = true, -- show whitespace characters
     listchars = { tab = "│→ ", extends = "⟩", precedes = "⟨", trail = "·", nbsp = "␣" },
     showbreak = "↪ ", swapfile = false,
-    copyindent = false
+    copyindent = false,
+    colorcolumn = "80",
   },
   g = {
     mapleader = " ",                 -- sets vim.g.mapleader
