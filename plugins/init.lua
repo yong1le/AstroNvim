@@ -7,6 +7,8 @@ return {
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.pack.vue" },
+
   { import = "astrocommunity.debugging.nvim-bqf" },
   { import = "astrocommunity.editing-support.refactoring-nvim" },
   { import = "astrocommunity.git.neogit" },
