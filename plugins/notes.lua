@@ -5,14 +5,18 @@ return {
   {
     "nvim-neorg/neorg",
     dependencies = {
-      "nvim-treesitter/nvim-treesitter"
+      "nvim-treesitter/nvim-treesitter",
     },
     version = false,
     opts = {
       load = {
         ["core.defaults"] = {},
-        ["core.keybinds"] = {
-          config = {},
+        ["core.keybinds"] = {},
+        ["core.concealer"] = {
+          config = {
+            folds = true,
+            icon_preset = "diamond",
+          },
         },
         ["core.completion"] = {
           config = {
@@ -46,7 +50,7 @@ return {
             type = "auto",
           },
         },
-        ["core.ui.calendar"] = {},
+        -- ["core.ui.calendar"] = {},
       },
     },
     keys = {
@@ -74,7 +78,7 @@ return {
         norg = {
           img_dir = "assets",
           img_dir_txt = "assets",
-          affix = "{/ %s}",
+          affix = "{/ ../%s}",
         },
       }
     end,
