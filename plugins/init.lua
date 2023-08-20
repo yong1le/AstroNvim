@@ -10,12 +10,22 @@ return {
   { import = "astrocommunity.pack.vue" },
 
   { import = "astrocommunity.debugging.nvim-bqf" },
+
   { import = "astrocommunity.editing-support.refactoring-nvim" },
-  { import = "astrocommunity.git.neogit" },
+  { import = "astrocommunity.editing-support.todo-comments-nvim" },
+
   { import = "astrocommunity.git.diffview-nvim" },
+
   { import = "astrocommunity.motion.leap-nvim" },
   { import = "astrocommunity.motion.harpoon" },
   { import = "astrocommunity.motion.nvim-surround" },
+
   { import = "astrocommunity.note-taking.neorg" },
+
   { import = "astrocommunity.utility/telescope-fzy-native-nvim" },
+
+  -- Import language specific stuff
+  { import = "user.plugins.editing" },
+  { import = "user.plugins.ui" },
+  { import = "user.plugins.langs" },
 }

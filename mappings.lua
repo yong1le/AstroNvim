@@ -30,6 +30,7 @@ return {
     ["<leader>o"] = { "<cmd> lua require('astronvim.utils').system_open()<cr>", desc = "Open file under cursor" },
     -- disable new file
     ["<leader>n"] = false,
+    ["<leader>ft"] = false,
   },
   t = {},
 }

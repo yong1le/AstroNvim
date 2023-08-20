@@ -1,8 +1,6 @@
 return {
   {
-
     "FabijanZulj/blame.nvim",
-
     cmd = { "ToggleBlame" },
     keys = {
       { "<leader>gB", "<cmd>ToggleBlame<cr>", desc = "Git Blame" },
