@@ -26,6 +26,8 @@ return {
 
   { import = "astrocommunity.markdown-and-latex.vimtex" },
 
+  { import = "astrocommunity.colorscheme.catppuccin"},
+
   { import = "user.plugins.editing" },
   { import = "user.plugins.ui" },
   { import = "user.plugins.langs" },
