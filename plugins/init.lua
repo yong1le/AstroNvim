@@ -22,9 +22,10 @@ return {
 
   { import = "astrocommunity.note-taking.neorg" },
 
-  { import = "astrocommunity.utility/telescope-fzy-native-nvim" },
+  { import = "astrocommunity.utility.telescope-fzy-native-nvim" },
 
-  -- Import language specific stuff
+  { import = "astrocommunity.markdown-and-latex.vimtex" },
+
   { import = "user.plugins.editing" },
   { import = "user.plugins.ui" },
   { import = "user.plugins.langs" },
